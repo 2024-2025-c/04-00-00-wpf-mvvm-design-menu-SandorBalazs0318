@@ -4,6 +4,8 @@
                     xmlns:controlPanelView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.ControlPanel"
                     xmlns:schoolCitizensViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens"
                     xmlns:schoolCitizensView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens"
+                    xmlns:SchoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
+                    xmlns:SchoolClassesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
                     >
     <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
         <controlPanelView:ControlPanelView/>
@@ -13,5 +15,9 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:StudentViewModel}">
         <schoolCitizensView:StudentView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type SchoolClassesViewModels:SchoolClassesViewModel}">
+        <SchoolClassesView:SchoolClassesView></SchoolClassesView:SchoolClassesView>
     </DataTemplate>
 </ResourceDictionary>
