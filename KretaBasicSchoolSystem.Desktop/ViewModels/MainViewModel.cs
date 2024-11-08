@@ -60,5 +60,13 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Icon = IconChar.UserGroup;
             CurrentChildView = _schoolCitizensViewModel;
         }
+
+        [RelayCommand]
+        public void ShowSchoolClasses()
+        {
+            Caption = "Osztályok";
+            Icon = IconChar.ChalkboardUser;
+            CurrentChildView = _schoolClassesViewModel;
+        }
     }
 }
