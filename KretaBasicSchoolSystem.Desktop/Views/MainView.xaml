@@ -24,7 +24,7 @@
         </Border.BorderBrush>
         <Grid>
             <Grid.ColumnDefinitions>
-                <!--Navigation menu-->
+                <!--Navigation menu--> 
                 <ColumnDefinition Width="250"/>
                 <!--Content section-->
                 <ColumnDefinition Width="*"/>
