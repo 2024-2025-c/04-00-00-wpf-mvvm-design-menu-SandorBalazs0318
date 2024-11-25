@@ -5,6 +5,8 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -13,23 +15,31 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
         private SchoolClassesViewModel _schoolClassesViewModel;
+        private SchoolSubjectsViewModel _schoolSubjectsViewModel;
+        private SchoolGradesViewModel _schoolGradesViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
             _schoolClassesViewModel = new SchoolClassesViewModel();
+            _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
+            _schoolGradesViewModel = new SchoolGradesViewModel();
         }
 
         public MainViewModel(
-            ControlPanelViewModel controlPanelViewModel, //gol fütő
+            ControlPanelViewModel controlPanelViewModel,
             SchoolCitizensViewModel schoolCitizensViewModel,
             SchoolClassesViewModel schoolClassesViewModel
+            SchoolSubjectsViewModel schoolSubjectsViewModel,
+            SchoolGradesViewModel schoolGradesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
             _schoolClassesViewModel = schoolClassesViewModel;
+            _schoolSubjectsViewModel = schoolSubjectsViewModel;
+            _schoolGradesViewModel = schoolGradesViewModel;
 
 
             CurrentChildView = _controlPanelViewModel;
@@ -67,6 +77,23 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Osztályok";
             Icon = IconChar.ChalkboardUser;
             CurrentChildView = _schoolClassesViewModel;
+        }
+        //csere
+
+        [RelayCommand]
+        public void ShowSchoolSubjects()
+        {
+            Caption = "Tantárgyak";
+            Icon = IconChar.GraduationCap;
+            CurrentChildView = _schoolSubjectsViewModel;
+        }
+
+        [RelayCommand]
+        public void ShowSchoolGrades()
+        {
+            Caption = "Osztályzatok";
+            Icon = IconChar.ListNumeric;
+            CurrentChildView = _schoolGradesViewModel;
         }
     }
 }
