@@ -6,6 +6,10 @@
                     xmlns:schoolCitizensView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens"
                     xmlns:SchoolClassesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses"
                     xmlns:SchoolClassesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
+                    xmlns:SchoolGradesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades"
+                    xmlns:SchoolGradesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolGrades"
+                    xmlns:SchoolSubjectsViewModel="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects"
+                    xmlns:SchoolSubjectsView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects"
                     >
     <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
         <controlPanelView:ControlPanelView/>
@@ -17,12 +21,30 @@
         <schoolCitizensView:StudentView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
-        <schoolCitizensView:StudentView/>
+        <schoolCitizensView:TeacherView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
-        <schoolCitizensView:StudentView/>
+        <schoolCitizensView:ParentView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type SchoolClassesViewModels:SchoolClassesViewModel}">
-        <SchoolClassesView:SchoolClassesView></SchoolClassesView:SchoolClassesView>
+        <SchoolClassesView:SchoolClassesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolSubjectsViewModel:SchoolSubjectsViewModel}">
+        <SchoolSubjectsView:SchoolSubjectsView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolGradesViewModels:SchoolGradesViewModel}">
+        <SchoolGradesView:SchoolGradesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolGradesViewModels:EndofYearViewModel}">
+        <SchoolGradesView:EndofYearView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolGradesViewModels:ClassesTaughtViewModel}">
+        <SchoolGradesView:ClassesTaughtView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolGradesViewModels:CurrentLessonViewModel}">
+        <SchoolGradesView:CurrentLessonView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type SchoolGradesViewModels:EndofSemesterViewModel}">
+        <SchoolGradesView:EndofSemesterView/>
     </DataTemplate>
 </ResourceDictionary>

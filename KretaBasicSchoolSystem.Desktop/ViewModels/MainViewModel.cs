@@ -5,6 +5,7 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
@@ -15,6 +16,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private SchoolCitizensViewModel _schoolCitizensViewModel;
         private SchoolClassesViewModel _schoolClassesViewModel;
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
+        private SchoolGradesViewModel _schoolGradesViewModel;
        
 
         public MainViewModel()
@@ -23,6 +25,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
             _schoolClassesViewModel = new SchoolClassesViewModel();
             _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
+            _schoolGradesViewModel = new SchoolGradesViewModel();
             
         }
 
@@ -30,7 +33,8 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             ControlPanelViewModel controlPanelViewModel,
             SchoolCitizensViewModel schoolCitizensViewModel,
             SchoolClassesViewModel schoolClassesViewModel,
-            SchoolSubjectsViewModel schoolSubjectsViewModel
+            SchoolSubjectsViewModel schoolSubjectsViewModel,
+            SchoolGradesViewModel schoolGradesViewModel
             
             )
         {
@@ -38,6 +42,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolCitizensViewModel = schoolCitizensViewModel;
             _schoolClassesViewModel = schoolClassesViewModel;
             _schoolSubjectsViewModel = schoolSubjectsViewModel;
+            _schoolGradesViewModel = schoolGradesViewModel;
             
 
 
@@ -86,13 +91,13 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Icon = IconChar.GraduationCap;
             CurrentChildView = _schoolSubjectsViewModel;
         }
-        /*
+        
         [RelayCommand]
         public void ShowSchoolGrades()
         {
             Caption = "Osztályzatok";
             Icon = IconChar.ListNumeric;
             CurrentChildView = _schoolGradesViewModel;
-        }*/
+        }
     }
 }
